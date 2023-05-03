@@ -1,2 +1,4 @@
 # Redes
-UFRJ_BCC_2023.1
+Disciplina de Redes de Ccomputadores
+
+Professora: Carolina Gil Marcelino
