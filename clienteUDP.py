@@ -6,7 +6,8 @@ UDP_PORT = 5005      # porta que o servidor está escutando
 print( f'\nT R A D U T O R - D E - R E D E S\n\n'+
       f'Digite uma das palavras a seguir para descobrir sua tradução em inglês:\n'+
       f'- rede - enlace - link - roteador -\n'+
-      f'- comutador - cliente - servidor - hospedeiro -\n' )
+      f'- comutador - cliente - servidor - hospedeiro -\n'+
+      f'- navegador - endereço IP - fim-a-fim -\n' )
 
 while True:
     message = input("Digite a palavra: ")
@@ -16,5 +17,7 @@ while True:
                          socket.SOCK_DGRAM) # UDP
     sock.sendto(message_bytes, (UDP_IP, UDP_PORT)) # envia a mensagem para o servidor
     data, server_addr = sock.recvfrom(1024) # espera pela mensagem de resposta
-    print("Mensagem recebida do servidor {}: {}".format(server_addr, data.decode('utf-8'))) # imprime a mensagem de resposta
+
+		# imprime a mensagem de resposta
+    print("Mensagem do servidor {}: {}".format(server_addr, data.decode('utf-8')))
     sock.close() # fecha o socket
