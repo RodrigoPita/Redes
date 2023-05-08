@@ -1,7 +1,7 @@
 import socket
 
 HOST = ''    # '' possibilita acessar qualquer endereco alcancavel da maquina local
-PORTA = 5000  # porta onde chegarao as mensagens para essa aplicacao
+PORTA = 5005  # porta onde chegarao as mensagens para essa aplicacao
 
 # cria um socket para comunicacao
 sock = socket.socket() # valores default: socket.AF_INET, socket.SOCK_STREAM  
@@ -19,7 +19,8 @@ print ( 'Conectado com: ', endereco )
 # dicionário para traduzir as palavras relacionadas a redes, do português para o inglês
 dicio_redes = {'rede':b'network', 'enlace':b'link', 'roteador':b'router', 
 	       'comutador':b'switch', 'cliente':b'client', 'servidor':b'server',
-	       'hospedeiro':b'host'}
+	       'hospedeiro':b'host', 'navegador':b'browser', 'endereço IP':b'IP address',
+	       'fim-a-fim':b'pier-to-pier'}
 
 while True:
 	# depois de conectar-se, espera uma mensagem (chamada pode ser BLOQUEANTE))
@@ -34,4 +35,4 @@ while True:
 novoSock.close() 
 
 # fecha o socket principal
-sock.close() 
+sock.close()
