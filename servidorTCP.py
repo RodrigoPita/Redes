@@ -20,7 +20,7 @@ print ( 'Conectado com: ', endereco )
 dicio_redes = {'rede':b'network', 'enlace':b'link', 'roteador':b'router', 
 	       'comutador':b'switch', 'cliente':b'client', 'servidor':b'server',
 	       'hospedeiro':b'host', 'navegador':b'browser', 'endereço IP':b'IP address',
-	       'fim-a-fim':b'pier-to-pier'}
+	       'fim-a-fim':b'peer-to-peer'}
 
 while True:
 	# depois de conectar-se, espera uma mensagem (chamada pode ser BLOQUEANTE))
